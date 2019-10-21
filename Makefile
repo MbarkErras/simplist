@@ -1,4 +1,4 @@
-NAME=42sh
+NAME=simplist.a
 
 SRCS=simplist_constructors.c \
 	simplist_delete.c \
@@ -19,8 +19,8 @@ FLAGS= -Wall -Werror -Wextra
 all: $(NAME)
 
 $(NAME): $(OBJS_PATH) $(INCLUDES)/simplist.h
-	ar rc $(OBJS_DIR)/*.c simplist.a
-	ranlib simplist.a
+	ar rc $(OBJS_DIR)/*.c $(NAME)
+	ranlib $(NAME)
 
 $(OBJS_PATH): $(OBJS_DIR)/%.o : $(SRCS_DIR)/%.c | $(OBJS_DIR)
 	gcc $(FLAGS) -I$(INCLUDES) -c $< -o $@
