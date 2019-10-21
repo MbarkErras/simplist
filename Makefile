@@ -19,7 +19,7 @@ FLAGS= -Wall -Werror -Wextra
 all: $(NAME)
 
 $(NAME): $(OBJS_PATH) $(INCLUDES)/simplist.h
-	ar rc $(OBJS_DIR)/*.c $(NAME)
+	ar -rc $(NAME) $(OBJS_DIR)/*.o
 	ranlib $(NAME)
 
 $(OBJS_PATH): $(OBJS_DIR)/%.o : $(SRCS_DIR)/%.c | $(OBJS_DIR)
