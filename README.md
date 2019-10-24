@@ -12,4 +12,7 @@ typedef	struct		s_list
 }					t_list;
 ```
 as it seems the lists are double linked.
-for the support of circular lists a convention is made: **ad previous pointer should be null**.
+for the support of circular lists a convention is made: **head previous pointer should be null**.  
+
+sent --✔️--> he
+inel <--❌-- ad
