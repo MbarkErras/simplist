@@ -10,9 +10,3 @@ typedef	struct		s_list
 	struct s_list	*prev;
 }					t_list;
 ```
-as it seems the lists are double linked.
-for the support of circular lists a convention is made: **head previous pointer should be null**. </br></br>
-![circular lists](https://i.imgur.com/I2iEzy5.png)
-</br></br>
-`void list_delete_node(t_list **head, t_list *node, void(delete_node)(void *));`</br>
-when `list_delete_node` is called to delete list's head, **the head->next becomes the new head.** 
