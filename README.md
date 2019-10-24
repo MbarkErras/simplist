@@ -12,5 +12,8 @@ typedef	struct		s_list
 }					t_list;
 ```
 as it seems the lists are double linked.
-for the support of circular lists a convention is made: **head previous pointer should be null**.  
-![circular lists](https://i.imgur.com/I2iEzy5.png)
+for the support of circular lists a convention is made: **head previous pointer should be null**. 
+</br>
+<p align="center">
+  <img src="https://i.imgur.com/I2iEzy5.png">
+</p>
