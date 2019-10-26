@@ -33,7 +33,7 @@ typedef	struct		s_list
 
 t_list				*list_create_node(void *content, size_t content_size);
 t_list				*list_head_tail(t_list *node, int head_or_tail);
-void				list_push(t_list **head, t_list *node, int X);
+void				list_push(t_list **head, t_list *node, int x);
 void				list_push_back(t_list **head, t_list *node);
 void				list_push_front(t_list **head, t_list *node);
 size_t				list_size(t_list *head);
