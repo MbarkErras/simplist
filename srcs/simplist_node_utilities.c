@@ -6,7 +6,7 @@
 /*   By: merras <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 01:24:14 by merras            #+#    #+#             */
-/*   Updated: 2019/10/21 01:58:34 by merras           ###   ########.fr       */
+/*   Updated: 2019/10/28 22:01:23 by merras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ t_list	*list_indexed_node(t_list *head, size_t index)
 {
 	size_t i;
 
-	i = 1;
+	i = 0;
 	while (head)
 	{
 		if (i == index)
