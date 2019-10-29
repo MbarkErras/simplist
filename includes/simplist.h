@@ -6,7 +6,7 @@
 /*   By: merras <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 02:00:23 by merras            #+#    #+#             */
-/*   Updated: 2019/10/29 12:58:03 by merras           ###   ########.fr       */
+/*   Updated: 2019/10/29 13:01:23 by merras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,6 @@ size_t				list_node_index(t_list *head, t_list *node);
 void				list_delete(t_list **head, void(*delete_node)(void *));
 void				list_delete_node(t_list **head, t_list *node,
 					void(delete_node)(void *));
-void				list_pop_node(list **head, t_list *node);
+void				list_pop_node(t_list **head, t_list *node);
 
 #endif
