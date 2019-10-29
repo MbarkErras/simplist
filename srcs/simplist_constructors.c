@@ -6,7 +6,7 @@
 /*   By: merras <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 01:12:35 by merras            #+#    #+#             */
-/*   Updated: 2019/10/21 01:21:08 by merras           ###   ########.fr       */
+/*   Updated: 2019/10/24 04:30:48 by merras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,17 @@ t_list	*list_create_node(void *content, size_t content_size)
 	return (node);
 }
 
-void	list_delete_node(t_list **head, t_list *node,
-		void (*delete_node)(void *))
+void	list_delete_node(t_list **head, t_list *node, void (*delete_node)(void *))
 {
 	if (!node || !head)
 		return ;
-	if (*head == node)
+	if (IS_HEAD(node))
 	{
 		*head = node->next;
+		if (node->next)
+		{
+			node->prev = NULL;
+		}
 		delete_node(node->content);
 		free(node);
 		return ;
