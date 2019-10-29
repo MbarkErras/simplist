@@ -6,7 +6,7 @@
 /*   By: merras <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 01:22:52 by merras            #+#    #+#             */
-/*   Updated: 2019/10/29 13:00:11 by merras           ###   ########.fr       */
+/*   Updated: 2019/10/29 13:02:55 by merras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ size_t	list_size(t_list *head)
 	return (size);
 }
 
-void	list_pop_node(list **head, t_list *node)
+void	list_pop_node(t_list **head, t_list *node)
 {
 	if (!head || !node)
 		return ;
