@@ -24,14 +24,14 @@ size_t	list_node_index(t_list *head, t_list *node)
 		index++;
 		head = head->next;
 	}
-	return (index + 1);
+	return (index);
 }
 
 t_list	*list_indexed_node(t_list *head, size_t index)
 {
 	size_t i;
 
-	i = 0;
+	i = 1;
 	while (head)
 	{
 		if (i == index)
