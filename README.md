@@ -10,3 +10,5 @@ typedef	struct		s_list
 	struct s_list	*prev;
 }					t_list;
 ```
+### conventions:
+indexes in `list_node_index` and `list_indexed_node` are 0 indexed.
