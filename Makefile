@@ -1,6 +1,7 @@
 NAME=simplist.a
 
 SRCS=simplist_constructors.c \
+	 simplist_copy.c \
 	simplist_delete.c \
 	simplist_node_utilities.c \
 	simplist_operators.c \
