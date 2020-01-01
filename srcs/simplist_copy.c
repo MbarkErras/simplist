@@ -11,12 +11,14 @@
 /* ************************************************************************** */
 
 #include "simplist.h"
+#include <stdio.h>
 
 t_list	*list_copy(t_list *head, int (*filter)(t_list *))
 {
 	t_list	*copy;
 	void	*content;
 
+	
 	copy = NULL;
 	while (head)
 	{
@@ -25,6 +27,7 @@ t_list	*list_copy(t_list *head, int (*filter)(t_list *))
 			content = malloc(head->content_size);
 			ft_memcpy(content, head->content, head->content_size);
 			list_push_back(&copy, list_create_node(content, head->content_size));
+			//printf(">>>>>>>>>> %p %p ", head, copy);
 		}
 		head = head->next;
 	}

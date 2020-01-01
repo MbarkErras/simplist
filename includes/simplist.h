@@ -55,6 +55,6 @@ void				list_delete(t_list **head, void(*delete_node)(void *));
 void				list_delete_node(t_list **head, t_list *node,
 					void(delete_node)(void *));
 void				list_pop_node(t_list **head, t_list *node);
-t_list				*list_copy(t_list *list, int (*filter)(t_list *));
-
+t_list				*list_copy(t_list *head, int (*filter)(t_list *));
+size_t				list_counter(t_list *head, int (*filter)(t_list *));
 #endif

@@ -45,3 +45,17 @@ void	list_pop_node(t_list **head, t_list *node)
 			node->prev->next = node->prev;
 	}
 }
+
+size_t	list_counter(t_list *head, int (*filter)(t_list *))
+{
+	int counter;
+
+	counter = 0;
+	while (head)
+	{
+		if (filter ? filter(head) : 1)
+			counter++;
+		head = head->next;
+	}
+	return (counter);
+}
