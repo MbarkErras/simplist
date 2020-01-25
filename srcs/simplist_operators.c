@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   simplist_operators.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: merras <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: merras <merras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 01:14:34 by merras            #+#    #+#             */
-/*   Updated: 2019/10/21 01:21:06 by merras           ###   ########.fr       */
+/*   Updated: 2020/01/25 23:52:18 by merras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ void	list_push(t_list **head, t_list *node, int x)
 	if (!head || !node)
 		return ;
 	if (!*head)
+	{
 		*head = node;
+		F_SET((*head)->data, HEAD_FLAG);
+	}
 	else
 	{
 		appendto = list_head_tail(*head, x);
