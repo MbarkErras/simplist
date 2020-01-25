@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   simplist_constructors.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: merras <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: merras <merras@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 01:12:35 by merras            #+#    #+#             */
-/*   Updated: 2019/10/24 04:30:48 by merras           ###   ########.fr       */
+/*   Updated: 2020/01/25 21:27:52 by merras           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ void	list_delete_node(t_list **head, t_list *node, void (*delete_node)(void *))
 	if (IS_HEAD(node))
 	{
 		*head = node->next;
+		if (*head)
+			F_SET((*head)->data, HEAD_FLAG);
 		if (node->next)
 		{
 			node->prev = NULL;
